@@ -454,10 +454,12 @@ Strophe = {
      */
     xmlescape: function(text) 
     {
-	text = text.replace(/\&/g, "&amp;");
+        text = text.replace(/\&/g, "&amp;");
         text = text.replace(/</g,  "&lt;");
         text = text.replace(/>/g,  "&gt;");
-        return text;    
+        text = text.replace(/'/g,  "&apos;");
+        text = text.replace(/"/g,  "&quot;");
+        return text;
     },
 
     /** Function: xmlTextNode
